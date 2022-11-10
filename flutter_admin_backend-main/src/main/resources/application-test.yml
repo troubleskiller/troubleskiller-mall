@@ -1,0 +1,15 @@
+datasource.url: jdbc:mysql://cairuoyu.com:3306/sid?serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+datasource.username: us
+datasource.password: pw
+
+redis.host: localhost
+redis.port: 6379
+redis.password:
+
+logging.config: classpath:logback-spring.xml
+logging.path: D:\logs\fa
+
+file.upload-path: http://www.cairuoyu.com/f/p4/
+file.download-path: /home/cry/projects/f/p4/
+
+token.timeout: 3600
