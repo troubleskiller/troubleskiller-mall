@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    username: root
+    password: 179e15eae84c94e0
+    url: jdbc:mysql://47.96.129.108:3306/mall-pms?serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.jdbc.Driver
+
+#配置 mybatis plus
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
