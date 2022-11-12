@@ -2,12 +2,20 @@ spring:
   datasource:
     username: root
     password: 179e15eae84c94e0
-    url: jdbc:mysql://47.96.129.108:3306/mall-cms?serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://47.96.129.108:3306/mall-mms?serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.jdbc.Driver
-
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: mall-member
 #配置 mybatis plus
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
   global-config:
     db-config:
       id-type: auto
+
+server:
+  port: 8000

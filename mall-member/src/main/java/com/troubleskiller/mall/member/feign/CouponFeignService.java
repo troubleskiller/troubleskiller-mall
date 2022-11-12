@@ -1,2 +1,11 @@
-package com.troubleskiller.mall.member.feign;public interface CouponFeignService {
+package com.troubleskiller.mall.member.feign;
+
+import com.troubleskiller.common.utils.R;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@FeignClient("mall-coupon")
+public interface CouponFeignService {
+    @RequestMapping("coupon/coupon/member/list")
+    public R membercoupons();
 }
