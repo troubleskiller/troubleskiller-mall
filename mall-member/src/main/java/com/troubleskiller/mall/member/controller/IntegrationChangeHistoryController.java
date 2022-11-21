@@ -37,7 +37,7 @@ public class IntegrationChangeHistoryController {
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = integrationChangeHistoryService.queryPage(params);
 
-        return R.ok().put("page", page);
+        return R.ok().put("data", page);
     }
 
 

@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 
  * @author troubleskiller
  * @email troubleskiller@outlook.com
- * @date 2022-11-10 23:55:22
+ * @date 2022-11-17 21:11:57
  */
 @Mapper
 public interface CategoryBrandRelationDao extends BaseMapper<CategoryBrandRelationEntity> {

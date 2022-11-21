@@ -22,7 +22,7 @@ import com.troubleskiller.common.utils.R;
  *
  * @author troubleskiller
  * @email troubleskiller@outlook.com
- * @date 2022-11-11 01:31:33
+ * @date 2022-11-17 21:11:52
  */
 @RestController
 @RequestMapping("product/spuinfo")
@@ -37,7 +37,7 @@ public class SpuInfoController {
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = spuInfoService.queryPage(params);
 
-        return R.ok().put("page", page);
+        return R.ok().put("data", page);
     }
 
 

@@ -25,7 +25,7 @@ public class Constant {
     /**
      * 当前页码
      */
-    public static final String PAGE = "page";
+    public static final String PAGE = "data";
     /**
      * 每页显示记录数
      */

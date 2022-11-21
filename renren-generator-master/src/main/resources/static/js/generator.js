@@ -24,7 +24,7 @@ $(function () {
             records: "page.totalCount"
         },
         prmNames : {
-            page:"page", 
+            page:"data", 
             rows:"limit", 
             order: "order"
         },

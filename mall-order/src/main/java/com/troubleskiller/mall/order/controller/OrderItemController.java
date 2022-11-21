@@ -37,7 +37,7 @@ public class OrderItemController {
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = orderItemService.queryPage(params);
 
-        return R.ok().put("page", page);
+        return R.ok().put("data", page);
     }
 
 

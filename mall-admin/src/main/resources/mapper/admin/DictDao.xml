@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.troubleskiller.mall.admin.dao.DictDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.troubleskiller.mall.admin.entity.DictEntity" id="dictMap">
+        <result property="id" column="id"/>
+        <result property="code" column="code"/>
+        <result property="name" column="name"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="createrId" column="creater_id"/>
+        <result property="state" column="state"/>
+    </resultMap>
+
+
+</mapper>

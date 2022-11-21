@@ -1,14 +1,19 @@
 package com.troubleskiller.mall.product.controller;
 
-import com.troubleskiller.common.utils.PageUtils;
-import com.troubleskiller.common.utils.R;
-import com.troubleskiller.mall.product.entity.SkuImagesEntity;
-import com.troubleskiller.mall.product.service.SkuImagesService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.Arrays;
 import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.troubleskiller.mall.product.entity.SkuImagesEntity;
+import com.troubleskiller.mall.product.service.SkuImagesService;
+import com.troubleskiller.common.utils.PageUtils;
+import com.troubleskiller.common.utils.R;
 
 
 
@@ -17,7 +22,7 @@ import java.util.Map;
  *
  * @author troubleskiller
  * @email troubleskiller@outlook.com
- * @date 2022-11-11 01:31:34
+ * @date 2022-11-17 21:11:55
  */
 @RestController
 @RequestMapping("product/skuimages")
@@ -32,7 +37,7 @@ public class SkuImagesController {
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = skuImagesService.queryPage(params);
 
-        return R.ok().put("page", page);
+        return R.ok().put("data", page);
     }
 
 

@@ -22,7 +22,7 @@ import com.troubleskiller.common.utils.R;
  *
  * @author troubleskiller
  * @email troubleskiller@outlook.com
- * @date 2022-11-11 01:31:35
+ * @date 2022-11-17 21:11:57
  */
 @RestController
 @RequestMapping("product/categorybrandrelation")
@@ -37,7 +37,7 @@ public class CategoryBrandRelationController {
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = categoryBrandRelationService.queryPage(params);
 
-        return R.ok().put("page", page);
+        return R.ok().put("data", page);
     }
 
 
