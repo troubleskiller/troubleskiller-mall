@@ -40,9 +40,5 @@ public class UserEntity implements Serializable {
 	 * 
 	 */
 	private Date updateTime;
-	/**
-	 * 
-	 */
-	private String face;
 
 }

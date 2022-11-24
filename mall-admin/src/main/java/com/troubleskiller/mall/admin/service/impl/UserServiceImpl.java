@@ -1,6 +1,8 @@
 package com.troubleskiller.mall.admin.service.impl;
 
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -24,6 +26,12 @@ public class UserServiceImpl extends ServiceImpl<UserDao, UserEntity> implements
         );
 
         return new PageUtils(page);
+    }
+
+    @Override
+    public boolean login(UserEntity user) {
+        List<UserEntity> entities = baseMapper.selectList(null);
+        return entities.contains(user);
     }
 
 }
