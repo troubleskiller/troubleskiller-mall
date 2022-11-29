@@ -3,6 +3,10 @@ package com.troubleskiller.mall.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.troubleskiller.common.utils.Query;
+import com.troubleskiller.mall.product.entity.CategoryEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -57,8 +61,7 @@ public class BrandController {
     @RequestMapping("/save")
     public R save(@RequestBody BrandEntity brand){
 		brandService.save(brand);
-
-        return R.ok();
+        return R.ok().put("code",200);
     }
 
     /**
@@ -67,8 +70,7 @@ public class BrandController {
     @RequestMapping("/update")
     public R update(@RequestBody BrandEntity brand){
 		brandService.updateById(brand);
-
-        return R.ok();
+        return R.ok().put("code",200);
     }
 
     /**
@@ -77,8 +79,7 @@ public class BrandController {
     @RequestMapping("/delete")
     public R delete(@RequestBody Long[] brandIds){
 		brandService.removeByIds(Arrays.asList(brandIds));
-
-        return R.ok();
+        return R.ok().put("code",200);
     }
 
 }

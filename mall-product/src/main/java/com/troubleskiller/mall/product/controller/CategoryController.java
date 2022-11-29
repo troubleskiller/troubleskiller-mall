@@ -65,7 +65,7 @@ public class CategoryController {
     public R save(@RequestBody CategoryEntity category){
 		categoryService.save(category);
 
-        return R.ok();
+        return R.ok().put("code",200);
     }
 
     /**
@@ -82,10 +82,13 @@ public class CategoryController {
      * 删除
      */
     @RequestMapping("/delete")
+
     public R delete(@RequestBody Long[] catIds){
+        //检查当前删除的菜单是否被别的地方引用，
 		categoryService.removeByIds(Arrays.asList(catIds));
 
-        return R.ok();
+        categoryService.removeMenu(Arrays.asList(catIds));
+        return R.ok().put("code",200);
     }
 
 }

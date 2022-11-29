@@ -4,6 +4,8 @@ spring:
     password: 179e15eae84c94e0
     url: jdbc:mysql://47.96.129.108:3306/mall-pms?serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      max-lifetime: 60000
   cloud:
     nacos:
       discovery:
@@ -16,6 +18,8 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
 
 server:
   port: 10000

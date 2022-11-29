@@ -22,6 +22,8 @@ public class PersonServiceImpl extends ServiceImpl<PersonDao, PersonEntity> impl
                 new Query<PersonEntity>().getPage(params),
                 new QueryWrapper<PersonEntity>()
         );
+        page.setTotal(baseMapper.selectCount( new QueryWrapper<PersonEntity>()));
+        System.out.println(baseMapper.selectCount( new QueryWrapper<PersonEntity>()));
 
         return new PageUtils(page);
     }

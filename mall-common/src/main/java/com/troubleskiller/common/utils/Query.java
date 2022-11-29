@@ -30,6 +30,7 @@ public class Query<T> {
         //分页参数
         long curPage = 1;
         long limit = 10;
+        long total = 0;
 
         if(params.get(Constant.PAGE) != null){
             curPage = Long.parseLong((String)params.get(Constant.PAGE));
